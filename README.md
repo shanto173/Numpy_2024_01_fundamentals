@@ -36,3 +36,160 @@ print(b)  # Output: [[1 2 3], [4 5 6]]
 # 3D array
 c = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 print(c)  # Output: [[[1 2] [3 4]] [[5 6] [7 8]]]
+```
+
+## Array Creation with `dtype`, `arange`, `ones`, `zeros`
+
+```python
+# Create arrays with specific data types and shapes
+np.array([1, 2, 3], dtype=float)  
+# Output: array([1., 2., 3.])
+
+# Create arrays using np.arange
+np.arange(1, 11, 2)  
+# Output: array([1, 3, 5, 7, 9])
+
+# Reshaping arrays
+np.arange(16).reshape(2, 2, 2, 2)  
+# Output: array([[[[ 0,  1],
+                   [ 2,  3]],
+
+                   [[ 4,  5],
+                   [ 6,  7]]],
+
+                  [[[ 8,  9],
+                    [10, 11]],
+
+                  [[12, 13],
+                   [14, 15]]]])
+
+# Ones and zeros arrays
+np.ones((3, 4))  
+# Output: array([[1., 1., 1., 1.], [1., 1., 1., 1.], [1., 1., 1., 1.]])
+
+np.zeros((3, 4))  
+# Output: array([[0., 0., 0., 0.], [0., 0., 0., 0.], [0., 0., 0., 0.]])
+```
+
+
+## `Random Numbers`, `Linspace` and `identity` Matrix
+
+```python
+# Random array
+np.random.random((3, 4))  
+# Output: Random values, e.g., array([[0.857, 0.312, 0.088, 0.352],
+                                      [0.968, 0.446, 0.563, 0.530],
+                                      [0.032, 0.285, 0.095, 0.879]])
+                                      
+
+# Linearly spaced array (Equal distance array)
+np.linspace(-10, 10, 10, dtype=int)  
+# Output: array([-10,  -8,  -6,  -4,  -2,   1,   3,   5,   7,  10])
+
+# Identity matrix
+np.identity(3)  
+# Output: array([[1., 0., 0.],
+                 [0., 1., 0.],
+                 [0., 0., 1.]])
+```
+
+## Array Attributes `ndim`, `shape`, `size`, `dtype`
+```python
+a3 = np.arange(8).reshape(2, 2, 2)
+
+# Number of dimensions
+print(a3.ndim)  
+# Output: 3
+
+# Shape of the array
+print(a3.shape)  
+# Output: (2, 2, 2)
+
+# Size of the array
+print(a3.size)  
+# Output: 8
+
+# Data type
+print(a3.dtype)  
+# Output: int64
+```
+
+## Numpy Array Operations
+
+```python
+a1 = np.arange(12).reshape(3, 4)
+a2 = np.arange(12, 24).reshape(3, 4)
+
+# Scalar operations: Arithmetic and relational
+a1 ** 2  
+# Output: array([[  0,   1,   4,   9], [ 16,  25,  36,  49], [ 64,  81, 100, 121]])
+
+# Relational operations
+a2 == 15  
+# Output: array([[False, False, False,  True], [False, False, False, False], [False, False, False, False]])
+
+# Vector operations: Arithmetic
+a1 ** a2  
+# Output: array([[                   0,                    1,                16384, 14348907], [4294967296, 762939453125, 101559956668416, 11398895185373143], [ 1152921504606846976, -1261475310744950487,  1864712049423024128,  6839173302027254275]])
+
+
+```
+
+## Array Functions `np.round`, `np.prod`, `np.var`, `np.sin`, `np.dot`
+
+```python
+
+# Array functions for mathematical computations
+a1 = np.random.random((3, 3)) * 100
+a1 = np.round(a1)
+
+# Max/Min/Sum/Product
+np.prod(a1, axis=0)  
+# Output: Product along axis 0, e.g., array([35991., 46872., 17892.])
+
+# Mean, median, standard deviation, variance
+# axis = 0 referes to column : axis = 1 referes to Row
+np.var(a1, axis=1)  
+# Output: Variance along axis 1, e.g., array([317.56, 854., 96.22])
+
+# Trigonometric functions
+np.sin(a1)  
+# Output: array of sine values for each element
+
+# Dot product
+a2 = np.arange(12).reshape(3, 4)
+a3 = np.arange(12, 24).reshape(4, 3)
+np.dot(a2, a3)  
+# Output: array([[114, 120, 126],
+                 [378, 400, 422],
+                 [642, 680, 718]])
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
