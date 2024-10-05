@@ -1,3 +1,19 @@
+
+# Index
+
+- [NumPy Examples](#numpy-examples)
+- [What is NumPy?](#what-is-numpy)
+- [Creating NumPy Arrays](#creating-numpy-arrays)
+- [Array Creation with `dtype`, `arange`, `ones`, `zeros`](#array-creation-with-dtype-arange-ones-zeros)
+- [Random Numbers, Linspace, and Identity Matrix](#random-numbers-linspace-and-identity-matrix)
+- [Array Attributes: `ndim`, `shape`, `size`, `dtype`](#array-attributes-ndim-shape-size-dtype)
+- [NumPy Array Operations](#numpy-array-operations)
+- [Array Functions: `np.round`, `np.prod`, `np.var`, `np.sin`, `np.dot`](#array-functions-npround-npprod-npvar-npsin-npdot)
+- [Indexing and Slicing](#indexing-and-slicing)
+- [Iterating and Reshaping](#iterating-and-reshaping)
+- [Stacking and Splitting](#stacking-and-splitting)
+
+
 # NumPy Examples
 
 This repository contains examples of using the NumPy library for numerical computing in Python. NumPy provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.
