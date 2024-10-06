@@ -248,7 +248,7 @@ np.hsplit(a4, 2)
 # Output: Splits array into two, e.g., [array([[ 0,  1], [ 4,  5], [ 8,  9]]), array([[ 2,  3], [ 6,  7], [10, 11]])]
 
 ```
-## Q-1 Create a null vector of size 10 but the fifth value which is 1.
+### Q-1 Create a null vector of size 10 but the fifth value which is 1.
 ```python
 a = np.nan*np.empty(10)
 a[4] = 1
@@ -264,7 +264,61 @@ Result: array([nan, nan, nan, nan,  1., nan, nan, nan, nan, nan])
 ```
 
 
+### Q-2 Ask the user to input two numbers a, and b. Write a program to generate a random array of shapes (a, b) and print the array and avg of the array.
+```python
 
+a = int(input('Enter a number'))
+b = int(input('Enter a number'))
+
+c = np.random.random((a,b))
+print(c)
+np.mean(c)
+
+Result:
+Enter a number 2 
+Enter a number 3
+[[0.46295527 0.93246053 0.51971643]
+ [0.55760796 0.30813307 0.0548773 ]]
+Avg is : 0.47262509258357205
+
+                    # OR
+
+
+## or another approach
+#  Storing 2 integer
+a,b = np.int32(input('Enter 2 value with space : ').split())
+
+# making a 2D array of user given input shape
+c = np.random.random((a,b))
+print(c)
+print('Avg is :',np.mean(c))
+
+Result:
+
+Enter 2 value with space :  2 3
+[[0.93245822 0.27240621 0.99575976]
+ [0.38927475 0.93636674 0.14778126]]
+Avg is : 0.6123411580768572
+
+                  # OR
+
+## or another approach using `MAP`
+#  Storing 2 integer
+a,b = map(int,input('Enter 2 value with space : ').split())
+
+# making a 2D array of user given input shape
+c = np.random.random((a,b))
+print(c)
+print('Avg is :',np.mean(c))
+
+Result:
+
+Enter 2 value with space :  2 3 
+[[0.65119993 0.1640673  0.10375826]
+ [0.97082532 0.77452849 0.60682133]]
+Avg is : 0.5452001065512276
+
+```
 
 
 
