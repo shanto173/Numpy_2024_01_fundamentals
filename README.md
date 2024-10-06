@@ -351,7 +351,15 @@ array([[1., 1., 1., 1., 1.],
 
 ```
 
+### `Q-4` Create a vector of size 10 with values ranging from 0 to 1, both excluded.
 
+```python
+np.linspace(0,1,12)[1:-1]
+
+resultL
+array([0.09090909, 0.18181818, 0.27272727, 0.36363636, 0.45454545,
+       0.54545455, 0.63636364, 0.72727273, 0.81818182, 0.90909091])
+```
 
 
 
