@@ -248,7 +248,20 @@ np.hsplit(a4, 2)
 # Output: Splits array into two, e.g., [array([[ 0,  1], [ 4,  5], [ 8,  9]]), array([[ 2,  3], [ 6,  7], [10, 11]])]
 
 ```
+## Q-1 Create a null vector of size 10 but the fifth value which is 1.
+```python
+a = np.nan*np.empty(10)
+a[4] = 1
+a
+result : array([nan, nan, nan, nan,  1., nan, nan, nan, nan, nan])
 
+                      # OR
+
+b = np.full(10,np.nan)
+b[4]=1
+b
+Result: array([nan, nan, nan, nan,  1., nan, nan, nan, nan, nan])
+```
 
 
 
