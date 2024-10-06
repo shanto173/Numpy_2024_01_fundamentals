@@ -248,7 +248,7 @@ np.hsplit(a4, 2)
 # Output: Splits array into two, e.g., [array([[ 0,  1], [ 4,  5], [ 8,  9]]), array([[ 2,  3], [ 6,  7], [10, 11]])]
 
 ```
-### Q-1 Create a null vector of size 10 but the fifth value which is 1.
+### `Q-1` Create a null vector of size 10 but the fifth value which is 1.
 ```python
 a = np.nan*np.empty(10)
 a[4] = 1
@@ -264,7 +264,7 @@ Result: array([nan, nan, nan, nan,  1., nan, nan, nan, nan, nan])
 ```
 
 
-### Q-2 Ask the user to input two numbers a, and b. Write a program to generate a random array of shapes (a, b) and print the array and avg of the array.
+### `Q-2` Ask the user to input two numbers a, and b. Write a program to generate a random array of shapes (a, b) and print the array and avg of the array.
 ```python
 
 a = int(input('Enter a number'))
@@ -321,7 +321,35 @@ Avg is : 0.5452001065512276
 ```
 
 
+### `Q-3`Write a function to create a 2d array with 1 on the border and 0 inside. Take 2-D array shape as (a,b) as parameter to function.
 
+Eg.-
+```
+[[1,1,1,1],
+[1,0,0,1],
+[1,0,0,1],
+[1,1,1,1]]
+```
+
+```python
+
+def fun(a,b):
+    c = np.ones((a,b))  
+    c[1:(a-1),1:(b-1)] = 0
+    return c
+
+a,b = np.int32(input("Enter a number:").split())
+fun(a,b)
+
+result
+
+Enter a number: 4 5
+array([[1., 1., 1., 1., 1.],
+       [1., 0., 0., 0., 1.],
+       [1., 0., 0., 0., 1.],
+       [1., 1., 1., 1., 1.]])
+
+```
 
 
 
