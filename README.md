@@ -361,12 +361,79 @@ array([0.09090909, 0.18181818, 0.27272727, 0.36363636, 0.45454545,
        0.54545455, 0.63636364, 0.72727273, 0.81818182, 0.90909091])
 ```
 
+### `Q-5` Can you create a identity mattrix of shape (3,4). If yes write code for it.
+
+```python
+# no, i can't create a identity matrix of shape (3,4)
+
+np.identity(3)
+
+result:
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
 
 
+#          OR
+
+np.eye(4)
+
+result:
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+
+```
 
 
+### `Q-6:` Create a 5x5 matrix with row values ranging from 0 to 4.
 
+```python
 
+a = np.zeros((5,5))
+
+a[:,:] = np.arange(0,5)
+a
+
+result:
+array([[0., 1., 2., 3., 4.],
+       [0., 1., 2., 3., 4.],
+       [0., 1., 2., 3., 4.],
+       [0., 1., 2., 3., 4.],
+       [0., 1., 2., 3., 4.]])
+
+```
+
+### `Q-7:`  Consider a random integer (in range 1 to 100) vector with shape `(10,2)` representing coordinates, and coordinates of a point as array is given. Create an array of distance of each point in the random vectros from the given point. Distance array should be interger type.
+
+```
+point = np.array([2,3])
+```
+
+```python
+
+a = np.random.randint(1,100,20).reshape(10,2)
+b = np.array([2,3])
+print(a)
+
+np.sqrt(np.sum((a-b)**2,axis=1)).astype(int)
+
+result:
+
+[[ 7 52]
+ [76 69]
+ [15 76]
+ [65 42]
+ [72 97]
+ [22 94]
+ [95 10]
+ [82  2]
+ [97 72]
+ [11 10]]
+array([ 49,  99,  74,  74, 117,  93,  93,  80, 117,  11])
+
+```
 
 
 
