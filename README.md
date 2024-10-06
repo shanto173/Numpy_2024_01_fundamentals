@@ -351,7 +351,7 @@ array([[1., 1., 1., 1., 1.],
 
 ```
 
-### `Q-4` Create a vector of size 10 with values ranging from 0 to 1, both excluded.
+### `Q-4` Create a vector of size 10 with values ranging from 0 to 1, both excluded `np.linespace`.
 
 ```python
 np.linspace(0,1,12)[1:-1]
@@ -361,7 +361,7 @@ array([0.09090909, 0.18181818, 0.27272727, 0.36363636, 0.45454545,
        0.54545455, 0.63636364, 0.72727273, 0.81818182, 0.90909091])
 ```
 
-### `Q-5` Can you create a identity mattrix of shape (3,4). If yes write code for it.
+### `Q-5` Can you create a identity mattrix of shape (3,4). If yes write code for it `np.identity` and `np.eye`.
 
 ```python
 # no, i can't create a identity matrix of shape (3,4)
@@ -436,7 +436,46 @@ array([ 49,  99,  74,  74, 117,  93,  93,  80, 117,  11])
 ```
 
 
+### `Q-8:` Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element `np.unravel_index(array element index,array shape) : np.unravel_index(100,a.shape)`?
 
+```python
+
+a = np.arange(6*7*8).reshape(6,7,8)
+print(a)
+np.unravel_index(100,a.shape)
+
+result :
+(1, 5, 4)
+```
+### `Q-9:` Arrays, You are given a space-separated list of numbers. Your task is to print a reversed NumPy array with the element type float.
+
+```python
+a = input('enter number').strip().split()
+print(a) 
+a = np.array(a[::-1],dtype=float)
+a
+
+
+result:
+
+enter number 1 2 3 4 -8 -10
+['1', '2', '3', '4', '-8', '-10']
+array([-10.,  -8.,   4.,   3.,   2.,   1.])
+
+```
+
+### `Q-11:` Softmax function Create a Python function to calculate the Softmax of the given numpy 1D array. The function only accepts the numpy 1D array, otherwise raise error. 
+
+```sql
+x = np.array([33.17344305, 45.61961654, 82.05405781, 80.9647098,  68.82830233, 91.52064278])
+y = (np.exp(x))/np.sum(np.exp(x))
+print(y)
+import matplotlib.pyplot as plt
+plt.plot(x,y)
+
+```
+
+![softmax plot](https://github.com/shanto173/Numpy_2024_01_fundamentals/blob/main/images/1.png)
 
 
 
