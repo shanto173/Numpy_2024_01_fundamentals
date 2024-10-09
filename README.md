@@ -478,5 +478,67 @@ plt.plot(x,y)
 ![softmax plot](https://github.com/shanto173/Numpy_2024_01_fundamentals/blob/main/images/1.png)
 
 
+### `Q-12:` Vertical stack
+Write a python function that accepts infinite number of numpy arrays and do the vertical stack to them. Then return that new array as result. The function only accepts the numpy array, otherwise raise error.
+**Example 1:**
+
+Input:
+```bash
+a= [[0 1 2 3 4]
+ [5 6 7 8 9]]
+
+b= [[1 1 1 1 1]
+ [1 1 1 1 1]]
+```
+
+Output:
+
+```bash
+[[0 1 2 3 4]
+ [5 6 7 8 9]
+ [1 1 1 1 1]
+ [1 1 1 1 1]]
+```
+
+**Example 2:**
+
+Input:
+```bash
+a= [[0 1 2 3 4]
+ [5 6 7 8 9]]
+
+b= [[1 1 1 1 1]
+ [1 1 1 1 1]]
+
+c= [[0.10117373 0.1677244  0.73764059 0.83166097 0.48985695]
+ [0.44581567 0.13502419 0.55692335 0.16479622 0.61193593]]
+```
+
+Output:
+```bash
+[[0.         1.         2.         3.         4.        ]
+ [5.         6.         7.         8.         9.        ]
+ [1.         1.         1.         1.         1.        ]
+ [1.         1.         1.         1.         1.        ]
+ [0.10117373 0.1677244  0.73764059 0.83166097 0.48985695]
+ [0.44581567 0.13502419 0.55692335 0.16479622 0.61193593]]
+```
+
+```python
+def numpya(*args):
+    for i in args:
+        if type(i) != np.ndarray:
+            raise TypeError('Requeired numpy array')
+    return np.vstack(args)
+
+a = np.arange(1,6).reshape(1,5)
+print(a)
+b = np.arange(6,11).reshape(1,5)
+print(b)
+c = np.random.random(5).reshape(1,5)
+print(c)
+print(numpya(a,b,c))
+
+```
 
 
