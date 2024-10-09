@@ -595,7 +595,24 @@ array([[ 0, -1,  2, -1,  4],
 ```
 
 
+### `Q-17:` Given two arrays of same shape make an array of max out of two arrays. (Numpy way)
+```
+a=np.array([6,3,1,5,8])
+b=np.array([3,2,1,7,2])
 
+Result-> [6 3 1 7 8]
+```
+
+```python
+
+a=np.array([6,3,1,5,8])
+b=np.array([3,2,1,7,2])
+
+np.max((a,b),axis=0)
+
+result:
+array([6, 3, 1, 7, 8])
+```
 
 
 
